@@ -359,19 +359,17 @@ Module Program
     End Sub
     Sub punto12()
         Dim valorCompra As Double
-        Const iva As Integer = 19
+        Const iva As Double = 0.19
         Dim compraIva As Double
         Dim valorTotal As Double
-        Dim newIva As Double
 
         Console.WriteLine("Digite el valor total de la compra")
         valorCompra = Console.ReadLine
-        newIva = iva * 100
-        compraIva = valorCompra * newIva
+        compraIva = valorCompra * iva
         valorTotal = valorCompra + compraIva
 
-        Console.WriteLine("El valor de la compra sin IVA:", valorCompra)
-        Console.WriteLine("El valor de IVA a pagar:", compraIva)
-        Console.WriteLine("El valor total a pagar es:", valorTotal)
+        Console.WriteLine("El valor de la compra sin IVA: {0}", valorCompra)
+        Console.WriteLine("El valor de IVA a pagar: {0}", compraIva)
+        Console.WriteLine("El valor total a pagar es: {0}", valorTotal)
     End Sub
 End Module
