@@ -29,7 +29,7 @@ Module Program
         Console.WriteLine("      Nivel 6: 30000mil pesos")
         Console.WriteLine("      Todos los demás niveles 35000 mil pesos")
         Console.WriteLine("7. Calcular el sueldo a pagar de un trabajador dado que se debe ingresar la cantidad de horas trabajadas y el valor de la hora en pesos. ")
-        Console.WriteLine("8. Calcular el interés a pagar porun dinero,colocado a generar interés diario.  Se debe ingresar la cantidad de dinero, los días que lleva generando interés")
+        Console.WriteLine("8. Calcular el interés a pagar por un dinero,colocado a generar interés diario.  Se debe ingresar la cantidad de dinero, los días que lleva generando interés")
         Console.WriteLine("   y el interés.  Se debe imprimir el interés y la cantidad de dinero más el interés. ")
         Console.WriteLine("9. Leer dos números enteros y determinar ¿cuálde los dos es positivo?")
         Console.WriteLine("10. Realizar un pseudocódigo que sume 3 números e imprima la suma.")
@@ -280,10 +280,12 @@ Module Program
     Sub punto8()
 
         Dim dinero As Integer
-        Dim interes As Single
+        Dim interes As Double
+        Dim newInteres As Double
         Dim cantDias As Integer
-        Dim valorCuota As Double
+        Dim valorInteresTotal As Double
         Dim valorInteres As Integer
+        Dim valorPagar As Double
 
         Console.WriteLine("Inserte el valor del prestamo")
         dinero = Console.ReadLine
@@ -292,13 +294,15 @@ Module Program
         Console.WriteLine("Inserte la cantidad de dias del prestamo")
         cantDias = Console.ReadLine
 
-        valorInteres = dinero * interes
-        valorCuota = valorInteres * cantDias
+        newInteres = interes / 100
+        valorInteres = dinero * newInteres
+        valorInteresTotal = valorInteres * cantDias
+        valorPagar = dinero + valorInteresTotal
 
         Console.WriteLine("Valor prestado: {0}", dinero)
         Console.WriteLine("Interes: {0}%", interes)
         Console.WriteLine("Cantidad de dias del prestamo:{0}", cantDias)
-        Console.WriteLine("Valor total a pagar por el prestamo: {0} ", valorCuota)
+        Console.WriteLine("Valor total a pagar por el prestamo: {0} ", valorPagar)
 
     End Sub
     Sub punto9()
