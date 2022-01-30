@@ -153,7 +153,7 @@ Module Program
             Console.WriteLine("Bien")
         ElseIf (nota >= 71 And nota <= 80) Then
             Console.WriteLine("Muy Bien")
-        ElseIf (nota >= 81 And nota >= 100) Then
+        ElseIf (nota >= 81 And nota <= 100) Then
             Console.WriteLine("Excelente")
         Else
             Console.WriteLine("Error, Verificar el dato insertado")
@@ -179,7 +179,7 @@ Module Program
         precioGaPExtra = 5000
         precioGaPre = 3900
         precioGaCoo = 3200
-        litro = 4.5
+        litro = 3.78
 
         Console.WriteLine("Inserte la cantidad de galones")
         cantGalones = Console.ReadLine
